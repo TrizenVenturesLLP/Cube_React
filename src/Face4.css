@@ -1,0 +1,33 @@
+.face4-container {
+    width: 100%;
+    height: 100%;
+    background: #f8f9fa; /* Subtle light gray for better contrast */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .face4-title {
+    font-size: 28px; /* Slightly larger title for emphasis */
+    font-weight: bold;
+    color: #3f51b5; /* Blue color */
+    margin-bottom: 20px; /* Add more spacing below the title */
+    text-align: center;
+  }
+  
+  .calendar {
+    width: 100%;
+    max-width: 550px; /* Adjust width for square dimensions */
+    max-height: 550px; /* Ensure height matches width */
+    aspect-ratio: 1 / 1; /* Forces square dimensions */
+    background: #ffffff; /* White background for the calendar itself */
+    border: 2px solid #e0e0e0; /* Subtle border for separation */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow for a modern look */
+    border-radius: 12px; /* Slightly rounded corners */
+    overflow: hidden; /* Ensure nothing overflows */
+    padding: 10px; /* Add some inner spacing for the calendar */
+  }
+  

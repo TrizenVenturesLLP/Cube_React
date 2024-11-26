@@ -1,0 +1,42 @@
+.scene {
+    perspective: 3000px; /* Adjusted for larger cube size */
+    width: 700px;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    cursor: grab;
+  }
+  
+  .scene:active {
+    cursor: grabbing;
+  }
+  
+  .cube {
+    width: 600px; /* Increased from 500px */
+    height: 600px; /* Increased from 500px */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  .face {
+    position: absolute;
+    width: 600px; /* Matches cube dimensions */
+    height: 600px; /* Matches cube dimensions */
+    background: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .front { transform: rotateY(0deg) translateZ(300px); }
+  .back { transform: rotateY(180deg) translateZ(300px); }
+  .right { transform: rotateY(90deg) translateZ(300px); }
+  .left { transform: rotateY(-90deg) translateZ(300px); }
+  .top { transform: rotateX(90deg) translateZ(300px); }
+  .bottom { transform: rotateX(-90deg) translateZ(300px); }
+  
