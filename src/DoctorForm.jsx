@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Cube from './Cube';
 import './DoctorForm.css';
+import { useNavigate } from 'react-router-dom';
 
 const DoctorForm = () => {
   const [formData, setFormData] = useState({
@@ -72,6 +73,8 @@ const DoctorForm = () => {
 
   const [showCube, setShowCube] = useState(false);
 
+  const navigate = useNavigate();
+
   const handleInputChange = (face, field, value) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -96,7 +99,14 @@ const DoctorForm = () => {
     setShowCube(true);
   };
 
+  const handleNavigate = () => {
+    navigate('/cube');
+  };
+
+
   return (
+    <>
+    {showCube == false ?
     <div className="doctor-form">
       <h1>Doctor Form</h1>
 
@@ -219,9 +229,10 @@ const DoctorForm = () => {
       </section>
 
       <button onClick={handleCreateCube}>Create Cube</button>
-
-      {showCube && <Cube details={formData} />}
     </div>
+    : null }
+    {showCube && <Cube details={formData} />}
+    </>
   );
 };
 
